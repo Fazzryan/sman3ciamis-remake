@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .artikel-hv {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+            /* transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12); */
+        }
+
+        .artikel-hv:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+        }
+
+        .p-hv {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+        }
+
+        .p-hv:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+        }
+
+        .eks-hv {
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .eks-hv:hover {
+            transform: scale(1.05);
+        }
+
+        .scrolTop {
+            box-shadow: 4px 4px 8px 0 #000000;
+            z-index: 1;
+            background: rgb(202, 183, 8);
+            ;
+            position: fixed;
+            bottom: 32px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .3s;
+        }
+
+        .scrolTop:hover {
+            color: #E4AF19;
+            box-shadow: inset 4px 4px 8px 0 #000000,
+                inset -4px -4px 6px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .scrolTop.active {
+            opacity: 1;
+            pointer-events: auto;
+            bottom: 32px;
+        }
+    </style>
+    <title>SMAN 3 Ciamis</title>
+</head>
+
+<body>
+    <a href="#" class="scrolTop">
+        <i class="bi bi-arrow-up-circle"></i>
+    </a>
+
+    <header class="mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-3 border-0" max-width="540px;">
+                        <div class="row g-0">
+                            <div class="col-2 text-center">
+                                <img src="img/smantic.png" class="rounded-start" width="70" alt="Logo Sman 3 Ciamis">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="">SMAN 3 Ciamis</h5>
+                                    <p class="card-text text-muted">Bangkit, Beriman dan Bertaqwa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow" style="background: #051232;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2 py-2">
+                        <a class="nav-link  fs-6" href="#jumbotron">Beranda</a>
+                    </li>
+                    <li class="nav-item mx-2 py-2">
+                        <a class="nav-link fs-6" href="#pengumuman">Pengumuman</a>
+                    </li>
+                    <li class="nav-item mx-2 py-2">
+                        <a class="nav-link fs-6" href="#ekstra">Ekstra</a>
+                    </li>
+                    <li class="nav-item mx-2 py-2">
+                        <a class="nav-link fs-6" href="#fasilitas">Fasilitas</a>
+                    </li>
+                    <li class="nav-item mx-2 py-2">
+                        <a class="nav-link fs-6" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-2 py-2">
+                        <a class="nav-link text-white fs-6 px-3 bg-warning rounded" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="jumbotron">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/profile.jpg" class="d-block w-100 img-fluid" alt="hero images">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/profile2.jpg" class="d-block w-100 img-fluid" alt="hero images">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/profile3.jpg" class="d-block w-100 img-fluid" alt="hero images">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="container mt-5 mb-3">
+        <div class="row mb-5 justify-content-between">
+            <div class="col-md-7 order-1">
+                <h2 class="mb-3 mt-md-0 mt-3">Artikel Terbaru</h2>
+                <div class="row row-cols-1 row-cols-md-2 g-2">
+                    <div class="col">
+                        <div class="card border-0 artikel-hv">
+                            <img src="img/1.jpg" class="img-fluid" alt="artikel">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Perpisahan Kelas 12 SMAN 3 Ciamis pada tangal 20
+                                    Maret 2020</h5>
+                                <a href="#" class="text-decoration-none text-warning">Baca selengkapnya...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 artikel-hv">
+                            <img src="img/artikel1.jpg" class="img-fluid" alt="artikel">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">
+                                    SMAN 3 Ciamis DISERBU SMAN 2 Ngaglik</h5>
+                                <a href="#" class="text-decoration-none text-warning">Baca selengkapnya...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card border-0 artikel-hv">
+                            <img src="img/artikel2.png" class="img-fluid" alt="artikel">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">6 SISWA SMAN 3 CIAMIS LOLOS SNMPTN 2018</h5>
+                                <a href="#" class="text-decoration-none text-warning">Baca selengkapnya...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 order-sm-1 mt-2 mt-md-0">
+                <div class="card border-0" style="background-color: #EEF3F6;">
+                    <div class="card-header">Data Sekolah</div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">SMAN 3 Ciamis</h5>
+                        <p class="text-center">NPSN : 20211499</p>
+                        <hr>
+                        <pre>
+NISS       : - 
+Akreditasi : - 
+Nama       : SMAN 3 Ciamis
+Alamat     : Jl. Bojonghuni No. 87 Ciamis
+KODE POS   : 46214
+TELEPON    : 0265773890
+EMAIL      : file@sman3ciamis.sch.id
+Jejang     : SMA 
+Status     : Negeri
+Situs      : <a href="http://sman3ciamis.sch.id">http://sman3ciamis.sch.id</a>
+KECAMATAN  : Ciamis
+KABUPATEN  : Ciamis
+PROVINSI   : JAWA BARAT
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="pengumuman" class="py-1 pb-5" style="background: #F3F8FB;">
+        <div class="container mt-5 mb-5">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2>Pengumuman</h2>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mt-md-2 mt-3">
+                    <div class="card border-0 p-hv">
+                        <img src="img/perpisahan.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <small class="text-muted"><i class="bi bi-clock-history text-warning"></i> 30 April
+                                2018</small>
+                            <h5 class="card-title mt-2">Pengumuman Kelulusan Siswa kelas 12</h5>
+                            <a href="#" class="btn btn-warning text-white">Lihat detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-md-2 mt-3">
+                    <div class="card border-0 p-hv">
+                        <img src="img/snmptn.jpeg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <small class="text-muted"><i class="bi bi-clock-history text-warning"></i> 17 April
+                                2018</small>
+                            <h5 class="card-title mt-2">Pengumuman SNMPTN 2018</h5>
+                            <a href="#" class="btn btn-warning text-white">Lihat detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-md-2 mt-3">
+                    <div class="card border-0 p-hv">
+                        <img src="img/sbmptn.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <small class="text-muted"><i class="bi bi-clock-history text-warning"></i> 15 April
+                                2018</small>
+                            <h5 class="card-title mt-2">Jadwal ujian SBMPTN Kelas XII 2018.</h5>
+                            <a href="#" class="btn btn-warning text-white">Lihat detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-md-2 mt-3">
+                    <div class="card border-0 p-hv">
+                        <img src="img/jadwal.jpeg" class="card-img-top img-fluid" alt="Pengumuman Jadwal">
+                        <div class="card-body">
+                            <small class="text-muted"><i class="bi bi-clock-history text-warning"></i> 6 April
+                                2018</small>
+                            <h5 class="card-title mt-2">Pengumuman jadwal UAS 2018</h5>
+                            <a href="#" class="btn btn-warning text-white">Lihat detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="ekstra" class="py-1 pb-5" style="background: #051232;">
+        <div class="container mt-5 mb-5">
+            <div class="row mb-4 justify-content-between">
+                <h2 class="text-white mb-4 mt-4 mt-md-0">Ekstrakurikuler</h2>
+                <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="card bg-dark text-white eks-hv">
+                        <img src="img/bola.jpg" class="card-img" alt="Sepak Bola">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title ">Sepak Bola</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="card bg-dark text-white eks-hv">
+                        <img src="img/basket.jpg" class="card-img" alt="Sepak Bola">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title ">Basket</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="card bg-dark text-white eks-hv">
+                        <img src="img/voli.jpg" class="card-img" alt="Sepak Bola">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title ">Volly</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="card bg-dark text-white eks-hv">
+                        <img src="img/tenis.jpg" class="card-img" alt="Sepak Bola">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title ">Tenis Meja</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="card bg-dark text-white eks-hv">
+                        <img src="img/taekwondo.jpg" class="card-img" alt="Sepak Bola">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title ">Taekwondo</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="card bg-dark text-white eks-hv">
+                        <img src="img/perisai.jpg" class="card-img" alt="Sepak Bola">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title ">Perisai Diri</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="card bg-dark text-white eks-hv">
+                        <img src="img/paskibra.jpg" class="card-img" alt="Sepak Bola">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title ">Paskibra</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="card bg-dark text-white eks-hv">
+                        <img src="img/bantara.jpg" class="card-img" alt="Sepak Bola">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title ">Bantara</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="fasilitas" class="py-1 mb-5">
+        <div class="container mt-5 mb-5">
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h2 class="mt-4 mb-4 mt-md-0">
+                        FASILITAS
+                    </h2>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/masjid.jpg" alt="masjid">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Masjid At-Taqwa</h5>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia quo sint impedit quae
+                        blanditiis. Cupiditate quae voluptate explicabo a earum consequuntur quam adipisci deserunt.
+                        In pariatur accusantium dolores nobis illum animi velit voluptate unde error quas
+                        perferendis dolorum nam soluta accusamus rerum</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/lapangbola.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Lapang Sepak Bola</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia quo sint impedit quae
+                        blanditiis. Cupiditate quae voluptate explicabo a earum consequuntur quam adipisci deserunt.
+                        In pariatur accusantium dolores nobis illum animi velit voluptate unde error quas
+                        perferendis dolorum nam soluta accusamus rerum,</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/lapangbasket.png" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Lapang Basket</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, tempora ab perspiciatis
+                        voluptatum quae est maiores nemo pariatur labore quia facere error, quod ducimus, sapiente
+                        nesciunt eligendi harum molestias! Aliquid.</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/labtik.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Lab Komputer</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus omnis consequatur
+                        asperiores, ut sequi optio officia consequuntur vitae debitis enim, in a magnam veritatis
+                        commodi minima dolorum laborum eaque modi!</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/labfisika.JPG" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Lab Fisika</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet odio repellendus, aspernatur
+                        magnam enim dolor maiores eius quisquam cupiditate cumque sint quaerat, ipsam facilis vel
+                        aperiam harum eos aliquid! Adipisci.</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/labkimia.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Lab Kimia</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam dolorum, in fugiat nemo aut
+                        veniam beatae aspernatur, corporis ducimus quae perspiciatis sed praesentium consequatur
+                        eligendi numquam magnam nam rem animi.</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/perps.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Perpustakaan</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fuga nam tenetur sint magni,
+                        debitis veritatis impedit adipisci labore animi qui, enim delectus laboriosam ipsa, voluptates
+                        quo! Iure, architecto autem.</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/mesh.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Mesh Siswa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsa dolorum iure voluptas ea
+                        hic, delectus consectetur eaque eveniet sequi porro in dolor praesentium. Similique dolore eum
+                        accusamus ratione enim!</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/kantin.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Kantin Siswa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut possimus animi doloremque quas modi
+                        accusantium soluta vitae deserunt in? Veniam, aspernatur optio? Sunt dolor voluptate dolore,
+                        molestiae blanditiis exercitationem neque?</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6 text-center">
+                    <img class="rounded img-fluid mt-2" src="img/parkir.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <h5 class="text-center rounded p-1 text-white bg-warning">Tempat Parkir</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore optio veniam corrupti magnam
+                        architecto assumenda non, unde ex atque nesciunt, vitae voluptates inventore facilis amet quia
+                        voluptas, necessitatibus quam repudiandae!</p>
+                    <hr>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="kontak" class="mb-5">
+        <div class="container shadow mt-2 mb-4 pt-2 pb-4 rounded">
+            <div class="row mt-4">
+                <div class="col-sm-12">
+                    <h2 class="text-center pb-4">
+                        Kontak Kami
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 pt-4">
+                    <h5 class="text-center">SMAN 3 CIAMIS</h5>
+                    <ul>
+                        <li>Jl. Bojonghuni No.67 Kec. Ciamis, Kabupaten Ciamis, Jawa Barat 46214</li>
+                        <li>Email : file@sman3ciamis.sch.id</li>
+                        <li>No.Telp (0265) 773890</li>
+                    </ul>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.3055818537114!2d108.33728291456154!3d-7.3195301947174904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5eae6546e071%3A0x20efa4219d1ee484!2sSMA%20Negeri%203%20Ciamis!5e0!3m2!1sid!2sid!4v1646646524345!5m2!1sid!2sid"
+                        style="border:0; width: 100%; height: 60%;" class="rounded" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+                <div class="col-sm-6 pt-4">
+                    <h5 class="mt-5 mt-md-0">Apabila ada hal yang ingin ditanyakan lebih lanjut, Anda bisa mengisi Form
+                        dibawah ini!</h5>
+                    <div class="mb-3 pt-4">
+                        <label for="exampleFormControlInput1" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email </label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button class="btn btn-warning" id="submit"><i class="bi bi-send"></i> Kirim</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="py-3" style="background: #002147;">
+        <div class="container mt-5 mb-5">
+            <div class="row mt-4 justify-content-end">
+                <div class="col-md-4 col-sm-12">
+                    <div class="d-flex mb-4">
+                        <a href="" class="mx-2 fs-4 text-white"><i class="bi bi-whatsapp"></i></a>
+                        <a href="" class="mx-2 fs-4 text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="" class="mx-2 fs-4 text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="" class="mx-2 fs-4 text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="d-block justify-content-end justify-content-sm-center">
+                        <p class="text-white mr-3 mb-0">
+                            <i class="bi bi-envelope-fill"></i>
+                            file@sman3ciamis.sch.id
+                        </p>
+                        <p class="text-white mr-3 mb-0">
+                            <i class="bi bi-telephone-fill"></i>
+                            0265773890
+                        </p>
+                        <p class="text-white mr-3 mb-0">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Jawa Barat, Kota Ciamis, Jl. Bojonghuni No. 87 Ciamis
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3" style="background:#20242D;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between text-white text-muted">
+                        <p>&copy; 2019 Dibuat oleh <a href="http://fzroom.epizy.com"
+                                class="text-decoration-none text-warning">Dinda Fazryan</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        const toTop = document.querySelector(".scrolTop");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        });
+    </script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
